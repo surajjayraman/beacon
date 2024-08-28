@@ -1,5 +1,19 @@
-import { UserButton } from "@clerk/nextjs";
-
-export default function Home() {
-  return <div className="h-screen"><UserButton afterSignOutUrl="/" /></div>;
-}
+import {
+    ClerkProvider,
+    SignInButton,
+    SignedIn,
+    SignedOut,
+    UserButton
+  } from '@clerk/nextjs'
+  import '@/styles/globals.css'
+  return (
+    <ClerkProvider>
+      <SignedOut>
+        <SignInButton />
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
+      <Component {...pageProps} />
+    </ClerkProvider>
+  )
