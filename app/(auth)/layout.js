@@ -1,17 +1,21 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 
-const inter = Inter({ subsets: ["latin"] });
+import "../globals.css";
 
 export const metadata = {
   title: "Auth",
-  description: "Little Lemon Social Media App",
+  description: "Social Media App",
 };
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-purple-1`}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${inter.className} bg-purple-2`}>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }
