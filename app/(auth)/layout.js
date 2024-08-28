@@ -5,7 +5,7 @@ import "../globals.css";
 
 export const metadata = {
   title: "Auth",
-  description: "Social Media App",
+  description: "Beacon Social Media App",
 };
 
 const inter = Inter({ subsets: ["latin"] });
