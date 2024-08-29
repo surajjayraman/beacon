@@ -4,7 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "../globals.css";
 
 export const metadata = {
-  title: "Home",
+  title: "Beacon Live",
   description: "Beacon Social Media App",
 };
 
