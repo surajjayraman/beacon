@@ -6,6 +6,7 @@ import LeftSideBar from "@/components/layout/LeftSideBar";
 import MainContainer from "@/components/layout/MainContainer";
 import TopBar from "@/components/layout/TopBar";
 import RightSideBar from "@/components/layout/RightSideBar";
+import BottomBar from "@components/layout/BottomBar";
 
 export const metadata = {
   title: "Beacon Live",
