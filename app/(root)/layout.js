@@ -2,6 +2,10 @@ import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 
 import "../globals.css";
+import LeftSideBar from "@/components/layout/LeftSideBar";
+import MainContainer from "@/components/layout/MainContainer";
+import TopBar from "@/components/layout/TopBar";
+import RightSideBar from "@/components/layout/RightSideBar";
 
 export const metadata = {
   title: "Beacon Live",
