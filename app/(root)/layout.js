@@ -19,12 +19,14 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body className={`${inter.className} bg-purple-1`}>
-          <LeftSideBar />
-          <MainContainer>
-            <TopBar />
-            {children}
-          </MainContainer>
-          <RightSideBar />
+          <main>
+            <LeftSideBar />
+            <MainContainer>
+              <TopBar />
+              {children}
+            </MainContainer>
+            <RightSideBar />
+          </main>
         </body>
       </html>
     </ClerkProvider>
