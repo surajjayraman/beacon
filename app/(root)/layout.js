@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body className={`${inter.className} bg-purple-1`}>
-          <main>
+          <main className="flex flex-row">
             <LeftSideBar />
             <MainContainer>
               <TopBar />
