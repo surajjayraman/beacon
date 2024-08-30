@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import Menu from "./Menu";
+import { UserButton } from "@clerk/nextjs";
 
 const LeftSideBar = () => {
   return (
@@ -47,7 +49,7 @@ const LeftSideBar = () => {
 
       <div className="flex gap-4 items-center">
         <UserButton
-          appearance={{ baseTheme: dark }}
+        //   appearance={{ baseTheme: dark }}
           afterSignOutUrl="/sign-in"
         />
         <p className="text-light-1 text-body-bold">Manage Account</p>
