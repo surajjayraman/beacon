@@ -1,9 +1,13 @@
-import { UserButton } from '@clerk/nextjs'
-import { dark } from '@clerk/themes'
-import { Add, Person, Search } from '@mui/icons-material'
-import Link from 'next/link'
+"use client";
+
+import { UserButton } from "@clerk/nextjs";
+import { dark } from "@clerk/themes";
+import { Add, Person, Search } from "@mui/icons-material";
+import Link from "next/link";
+import { useState } from "react";
 
 const TopBar = () => {
+  const [ search, setSearch ] = useState("");
   return (
     <div className="flex justify-between items-center mt-6">
       <div className="relative">
@@ -11,8 +15,8 @@ const TopBar = () => {
           type="text"
           className="search-bar"
           placeholder="Search posts, people, ..."
-          value=""
-          onChange=""
+          value={search}
+          onChange={e => setSearch(e.target.value)}
         />
         <Search
           className="search-icon"
@@ -28,14 +32,17 @@ const TopBar = () => {
       </button>
 
       <div className="flex gap-4 md:hidden">
-        <Link href=''>
+        <Link href="">
           <Person sx={{ fontSize: "35px", color: "white" }} />
         </Link>
 
-        <UserButton appearance={{ baseTheme: dark }} afterSignOutUrl="/sign-in" />
+        <UserButton
+          appearance={{ baseTheme: dark }}
+          afterSignOutUrl="/sign-in"
+        />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TopBar
+export default TopBar;
