@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Menu from "./Menu";
-import { UserButton } from "@clerk/nextjs";
+import { SignedIn, SignIn, SignOutButton, UserButton } from "@clerk/nextjs";
+import { Logout } from "@mui/icons-material";
 
 const LeftSideBar = () => {
   return (
@@ -48,10 +49,7 @@ const LeftSideBar = () => {
       <hr />
 
       <div className="flex gap-4 items-center">
-        <UserButton
-        //   appearance={{ baseTheme: dark }}
-          afterSignOutUrl="/sign-in"
-        />
+        <UserButton />
         <p className="text-light-1 text-body-bold">Manage Account</p>
       </div>
     </div>
