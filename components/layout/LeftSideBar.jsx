@@ -23,7 +23,7 @@ const LeftSideBar = () => {
               className="rounded-full"
             />
           </Link>
-          <p className="text-small-bold"></p>
+          <p className="text-small-bold">Little Lemon</p>
         </div>
         <div className="flex text-light-1 justify-between">
           <div className="flex flex-col items-center">
