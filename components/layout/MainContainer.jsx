@@ -7,10 +7,10 @@ const MainContainer = () => {
       <TopBar />
       <div className="mt-6 mb-20">
         <h1 className="mb-5 text-heading2-bold max-sm:text-heading3-bold text-light-1">
-          {title}
+          {/* {title} */}
         </h1>
         <div className="h-screen overflow-y-scroll custom-scrollbar">
-          {children}
+          {/* {children} */}
         </div>
       </div>
     </section>
