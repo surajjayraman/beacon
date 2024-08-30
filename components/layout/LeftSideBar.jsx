@@ -49,7 +49,7 @@ const LeftSideBar = () => {
       <hr />
 
       <div className="flex gap-4 items-center">
-        <UserButton />
+        <UserButton afterSignOutUrl="/sign-in"/>
         <p className="text-light-1 text-body-bold">Manage Account</p>
       </div>
     </div>
