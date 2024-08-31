@@ -15,11 +15,11 @@ const BottomBar = () => {
           <Link
             key={link.label}
             href={link.route}
-            className={`flex gap-4 justify-start rounded-lg py-2 px-4 ${
+            className={`flex gap-2 items-center rounded-lg py-2 px-4 ${
               isActive && "bg-purple-1"
             }`}
           >
-            {link.icon} <p className="text-light-1">{link.label}</p>
+            {link.icon} <p className="text-small-medium text-light-1 max-sm:hidden">{link.label}</p>
           </Link>
         );
       })}
