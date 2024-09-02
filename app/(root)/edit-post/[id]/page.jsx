@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Loader from "@components/Loader";
 import Posting from "@components/form/Posting";
@@ -33,14 +33,15 @@ const EditPost = () => {
     caption: postData?.caption,
     tag: postData?.tag,
     postPhoto: postData?.postPhoto,
-  }
+  };
 
-  console.log(postInfo)
+  // console.log(postInfo)
+
   return loading ? (
     <Loader />
   ) : (
     <div className="pt-6">
-      <Posting post={postInfo} apiEndpoint={`/api/post/${id}`}/>
+      <Posting post={postInfo} apiEndpoint={`/api/post/${id}`} />
     </div>
   );
 };
