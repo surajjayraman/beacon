@@ -4,6 +4,8 @@ import { connectToDB } from "@lib/mongodb/mongoose";
 export const GET = async (req, { params }) => {
   const { query } = params;
 
+  console.log('From api search query route: ', query)
+
   try {
     await connectToDB();
 
