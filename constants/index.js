@@ -34,23 +34,12 @@ export const sidebarLinks = [
     route: "/liked-posts",
     label: "Liked Posts",
   },
-  {
-    icon: (
-      <AddPhotoAlternateOutlined sx={{ color: "white", fontSize: "26px" }} />
-    ),
-    route: "",
-    label: "Become a Host",
-  },
+
   {
     icon: <GroupOutlined sx={{ color: "white", fontSize: "26px" }} />,
     route: "",
     label: "Orders",
   },
-  {
-    icon: <FavoriteBorder sx={{ color: "white", fontSize: "26px" }} />,
-    route: "",
-    label: "Wish List",
-  }
 ];
 
 export const pageTitles = [

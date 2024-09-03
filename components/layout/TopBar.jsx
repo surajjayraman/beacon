@@ -2,7 +2,16 @@
 
 import { UserButton } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
-import { Add, Person, Search } from "@mui/icons-material";
+import {
+  Add,
+  Person,
+  Search,
+  Shop,
+  Shop2,
+  Shop2Outlined,
+  ShoppingCartCheckout,
+  ShopRounded,
+} from "@mui/icons-material";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -14,6 +23,10 @@ const TopBar = () => {
   const router = useRouter();
   return (
     <div className="flex justify-between items-center mt-6">
+      <button className="create-post-btn" onClick={() => {}}>
+        <ShopRounded /> <p>Shop Now</p>
+      </button>
+
       <div className="relative">
         <input
           type="text"
@@ -22,7 +35,12 @@ const TopBar = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <Search className="search-icon" onClick={() => {router.push(`/search/posts/${search}`)}} />
+        <Search
+          className="search-icon"
+          onClick={() => {
+            router.push(`/search/posts/${search}`);
+          }}
+        />
       </div>
 
       <button
@@ -30,6 +48,13 @@ const TopBar = () => {
         onClick={() => router.push("/create-post")}
       >
         <Add /> <p>Create A Post</p>
+      </button>
+
+      <button
+        className="create-post-btn"
+        onClick={() => {}}
+      >
+        <ShoppingCartCheckout /> <p>Checkout</p>
       </button>
 
       <div className="flex gap-4 md:hidden">
