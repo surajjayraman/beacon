@@ -23,10 +23,6 @@ const TopBar = () => {
   const router = useRouter();
   return (
     <div className="flex justify-between items-center mt-6">
-      <button className="create-post-btn" onClick={() => {}}>
-        <ShopRounded /> <p>Shop Now</p>
-      </button>
-
       <div className="relative">
         <input
           type="text"
@@ -48,13 +44,6 @@ const TopBar = () => {
         onClick={() => router.push("/create-post")}
       >
         <Add /> <p>Create A Post</p>
-      </button>
-
-      <button
-        className="create-post-btn"
-        onClick={() => {}}
-      >
-        <ShoppingCartCheckout /> <p>Checkout</p>
       </button>
 
       <div className="flex gap-4 md:hidden">
