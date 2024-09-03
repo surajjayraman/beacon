@@ -21,14 +21,15 @@ const Posting = ({ post, apiEndpoint }) => {
     try {
       const postForm = new FormData();
 
-      postForm.append("creatorId", data.creatorId);
-      postForm.append("caption", data.caption);
-      postForm.append("tag", data.tag);
+      postForm.append("creatorId", data?.creatorId);
+      // console.log('From handlepublish: ',data?.creatorId)
+      postForm.append("caption", data?.caption);
+      postForm.append("tag", data?.tag);
 
       if (typeof data.postPhoto !== "string") {
-        postForm.append("postPhoto", data.postPhoto[0]);
+        postForm.append("postPhoto", data?.postPhoto[0]);
       } else {
-        postForm.append("postPhoto", data.postPhoto);
+        postForm.append("postPhoto", data?.postPhoto);
       }
 
       const response = await fetch(apiEndpoint, {
@@ -37,7 +38,8 @@ const Posting = ({ post, apiEndpoint }) => {
       });
 
       if (response.ok) {
-        router.push(`/profile/${data.creatorId}/posts`)
+        // console.log('From response ok : ',data?.creatorId)
+        router.push(`/profile/${data?.creatorId}/posts`)
       }
     } catch (err) {
       console.log(err);

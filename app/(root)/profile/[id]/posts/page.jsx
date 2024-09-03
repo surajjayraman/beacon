@@ -10,6 +10,8 @@ import React, { useEffect, useState } from "react";
 const ProfilePosts = () => {
   const { id } = useParams();
 
+  // console.log('Profile Posts value of id: ',id)
+
   const [loading, setLoading] = useState(true);
 
   const [userData, setUserData] = useState({});
@@ -32,7 +34,7 @@ const ProfilePosts = () => {
 
   const { user, isLoaded } = useUser();
 
-  console.log(userData)
+  // console.log("From Profile Posts USERDATA: ", userData);
 
   return loading || !isLoaded ? (
     <Loader />
@@ -42,7 +44,13 @@ const ProfilePosts = () => {
 
       <div className="flex flex-col gap-9">
         {userData?.posts?.map((post) => (
-          <PostCard key={post._id} post={post} creator={post.creator} loggedInUser={user} update={getUser}/>
+          <PostCard
+            key={post._id}
+            post={post}
+            creator={post.creator}
+            loggedInUser={user}
+            update={getUser}
+          />
         ))}
       </div>
     </div>
