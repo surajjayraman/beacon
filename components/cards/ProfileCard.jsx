@@ -33,7 +33,7 @@ const ProfileCard = ({ userData, activeTab }) => {
     }
   }, [user]);
 
-  console.log('From ProfileCard UserInfo: ', userInfo)
+//   console.log('From ProfileCard UserInfo: ', userInfo)
 
   const isFollowing = userInfo?.following?.find(
     (item) => item._id === userData?._id
