@@ -87,7 +87,7 @@ const Posting = ({ post, apiEndpoint }) => {
             if (
               typeof value === "null" ||
               (Array.isArray(value) && value.length === 0) ||
-              value === "underfined"
+              value === "undefined"
             ) {
               return "A photo is required!";
             }
